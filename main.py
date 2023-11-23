@@ -24,7 +24,6 @@ class MyWidget(QWidget):
                     FROM roasting WHERE id={result[i][2]}""").fetchall()[0][0])
                     self.tableWidget.setItem(i, j, item)
                 elif j == 3:
-                    print(result[j][2])
                     item = QTableWidgetItem(self.cur.execute(f"""SELECT type 
                     FROM type WHERE id={result[i][3]}""").fetchall()[0][0])
                     self.tableWidget.setItem(i, j, item)
